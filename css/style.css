@@ -224,3 +224,62 @@
     }
 
 }
+
+.clients {
+    padding-top: 106px;
+    box-sizing: border-box;
+    background-image: url(/1/img/bg_clients.png);
+    background-size: cover;
+    height: 658px;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 65px;
+
+        .item {
+            justify-items: center; /* can use out of flexbox */
+        }
+
+        .photo {
+            width: 80px;
+            height: 80px;
+            background: rgb(78, 78, 94);
+        }
+
+        .name {
+            margin-top: 24px;
+            font-weight: 500;
+            font-size: 22px;
+            color: white;
+        }
+
+        .title {
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--contrast-color);
+        }
+
+        .comment {
+            margin-top: 37px;
+            width: 324px;
+            font-style: italic;
+            font-size: 16px;
+            color: white;
+            opacity: 0.66;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+    }
+
+    .logos {
+        display: flex;
+        width: 960px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 69px;
+        margin-inline: auto;
+    }
+}
