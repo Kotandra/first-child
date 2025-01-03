@@ -102,11 +102,11 @@
 /*New Design*/
 
 .new-design {
-    background: no-repeat right bottom / calc(100% - 872px) url(../img/triangle.png) var(--bg-grey);
+    background: no-repeat left 872px top -65px url(../img/red-geometry.png) var(--bg-grey);
     /* background-image: url(../img/triangle.png); */
     /* background-repeat: no-repeat; */
-    /* background-position: right bottom; */
-    /* background-size: calc(100% - 872px); */
+    /* background-position: left 872px top -65px; */
+    /* background-size: 100% */
     /* background-color: #28282828; */
     margin-top: -13px;
 
@@ -155,8 +155,7 @@
     height: 675px;
     background-color: var(--bg-grey);
     text-align: center;
-    overflow: hidden;
-    /*прячет контент, который выходит за пределы родителя*/
+    overflow: hidden; /*hides content that exceeds the parent*/
 }
 
 #pens {
