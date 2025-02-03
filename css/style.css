@@ -5,7 +5,7 @@
     --bg-grey: rgb(237, 237, 237);
     --blue-op: rgba(50, 57, 105, .6);
     --blue: rgb(50, 57, 105);
-    
+
     font-family: "Exo", sans-serif;
     /*font-weight:
     thin - 100, regular - 400 (default), medium - 500*/
@@ -310,6 +310,64 @@
             height: 100%;
             position: absolute;
             top: 0;
+        }
+    }
+}
+
+.try-now {
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 90px;
+    background-color: rgb(50, 57, 105);
+    text-align: center;
+
+    .white-title {
+        color: white;
+    }
+
+    form {
+        display: inline-flex;
+        gap: 27px;
+        align-items: flex-end;
+
+        input {
+            width: 265px;
+            height: 50px;
+            padding-left: 30px;
+            box-sizing: border-box;
+            background-color: #464c77;
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 5px;
+            
+            font-size: 16px;
+            color: white;
+            
+            &::placeholder {
+                text-transform: uppercase;
+                color: rgba(246, 245, 243, .5);
+            }
+        }
+        
+        .test-free {
+            color: rgba(246, 245, 243);
+            margin-bottom: 37px;
+        }
+        
+        .btn {
+            width: 265px;
+        }
+    }
+
+    .terms {
+        color: rgba(255, 255, 255, .6);
+        margin-top: 50px;
+
+        a {
+            color: inherit;
+
+            &:hover {    
+                color: rgba(255, 255, 255, .8);
+            }
         }
     }
 }
