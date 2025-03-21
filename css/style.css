@@ -11,6 +11,12 @@
     thin - 100, regular - 400 (default), medium - 500*/
 }
 
+h4 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--grey);
+}
+
 /*header*/
 
 .header {
@@ -157,52 +163,49 @@
     text-align: center;
     overflow: hidden;
     /*hides content that exceeds the parent*/
+
+    #pens {
+        position: absolute;
+        top: -14px;
+        left: 82px;
+    }
+
+    #earphones {
+        position: absolute;
+        top: -9px;
+        right: 165px;
+    }
+
+    #coffee {
+        position: absolute;
+        top: 716px;
+        right: 50px;
+    }
+
+    /* [alt="pens"] {
+        position: absolute;
+        top: -14px;
+        left: 82px;
+    } */
+
+    .features-item {
+        margin-top: 45px;
+        display: inline-block;
+        width: 342px;
+        text-align: center;
+    }
+
+    .item-margin {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    h4 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
 }
 
-#pens {
-    position: absolute;
-    top: -14px;
-    left: 82px;
-}
-
-#earphones {
-    position: absolute;
-    top: -9px;
-    right: 165px;
-}
-
-#coffee {
-    position: absolute;
-    top: 716px;
-    right: 50px;
-}
-
-/* [alt="pens"] {
-    position: absolute;
-    top: -14px;
-    left: 82px;
-} */
-
-.features-item {
-    margin-top: 45px;
-    display: inline-block;
-    width: 342px;
-    text-align: center;
-}
-
-.item-margin {
-    margin-left: 45px;
-    margin-right: 45px;
-}
-
-.item-title {
-    margin-top: 30px;
-    margin-bottom: 20px;
-
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--grey);
-}
 
 .laptop {
     background: no-repeat left -900px top -100px url(../img/red-geometry.png);
@@ -338,21 +341,21 @@
             background-color: #464c77;
             border: 1px solid rgba(255, 255, 255, .5);
             border-radius: 5px;
-            
+
             font-size: 16px;
             color: white;
-            
+
             &::placeholder {
                 text-transform: uppercase;
                 color: rgba(246, 245, 243, .5);
             }
         }
-        
+
         .test-free {
             color: rgba(246, 245, 243);
             margin-bottom: 37px;
         }
-        
+
         .btn {
             width: 265px;
         }
@@ -365,9 +368,60 @@
         a {
             color: inherit;
 
-            &:hover {    
+            &:hover {
                 color: rgba(255, 255, 255, .8);
             }
         }
     }
+}
+
+.footer {
+    background: no-repeat left 900px top -1150px url(../img/red-geometry.png);
+    padding-top: 93px;
+    padding-bottom: 103px;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+
+        h4 {
+            line-height: 46px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--grey-op);
+
+            &:hover {
+                text-decoration: underline;
+                color: var(--grey);
+            }
+        }
+
+        .contacts {
+            width: 231px;
+            white-space: pre-line;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 26px;
+            color: var(--grey-op);
+
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            line-height: 30px;
+            font-size: 14px;
+            color: var(--grey-op);
+        }
+
+        input {
+            height: 50px;
+            font-size: 16px;
+        }
+    }
+
+
 }
