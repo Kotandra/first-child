@@ -291,6 +291,7 @@ h4 {
 .browser {
     padding-top: 108px;
     justify-items: center;
+    background: var(--bg-grey);
 
     .text {
         width: 647px;
@@ -392,11 +393,6 @@ h4 {
         a {
             text-decoration: none;
             color: var(--grey-op);
-
-            &:hover {
-                text-decoration: underline;
-                color: var(--grey);
-            }
         }
 
         .contacts {
@@ -417,11 +413,78 @@ h4 {
             color: var(--grey-op);
         }
 
-        input {
-            height: 50px;
-            font-size: 16px;
+        :where(.phone-link, .menu-item):hover {
+            text-decoration: underline;
+            color: var(--grey);
         }
+
+        form {
+            display: flex;
+
+            input {
+                width: 265px;
+                height: 50px;
+                padding-left: 30px;
+                box-sizing: border-box;
+                background-color: var(--bg-grey);
+                border: none;
+                border-radius: 5px;
+
+                font-size: 16px;
+                color: var(--grey);
+
+                &:focus {
+                    outline: 1px dashed var(--grey-op);
+                }
+
+                &::placeholder {
+                    text-transform: uppercase;
+                    color: var(--grey-op);
+                }
+            }
+
+            .btn {
+                width: 55px;
+                font-size: 20px;
+            }
+        }
+
+        .social {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            gap: 30px;
+
+            .fa-brands {
+                font-size: 20px;
+
+                &:hover {
+                    color: var(--contrast-color);
+                }
+            }
+        }
+
+        /* test sprites */
+        /* .icon {
+            width: 20px;
+            height: 21px;
+            background: url(/1/img/icon_sprites.png) no-repeat;
+        }
+
+        .bg-facebook {
+            background-position: -16px -21px;
+        }
+
+        .bg-twitter {
+            background-position: -71px -19px;
+        }
+
+        .bg-dribbble {
+            background-position: -131px -21px;
+        }
+
+        .bg-googleplus {
+            background-position: -190px -19px;
+        } */
     }
-
-
 }
