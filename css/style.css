@@ -12,8 +12,7 @@
 }
 
 h2 {
-    margin-top: 16px;
-    margin-bottom: 45px;
+    margin: 1rem 0 3rem;
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.2;
@@ -30,7 +29,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--grey);
 }
@@ -133,7 +132,7 @@ h4 {
 }
 
 .new-design {
-    background: no-repeat left 872px top -65px url(../img/red-geometry.png) var(--bg-grey);
+    background: no-repeat left 712px top -65px url(../img/red-geometry.png) var(--bg-grey);
     /* background-image: url(../img/triangle.png); */
     /* background-repeat: no-repeat; */
     /* background-position: left 872px top -65px; */
@@ -143,79 +142,82 @@ h4 {
 
     .wrapper {
         box-sizing: border-box;
-        padding: 190px 150px 0;
+        padding: 90px 150px;
         width: 872px;
-        padding-top: 90px;
-        padding-bottom: 90px;
+        max-width: 100%;
         background-color: white;
     }
 }
 
 .features {
     position: relative;
-    padding-top: 140px;
-    padding-bottom: 90px;
+    isolation: isolate;
+    padding: 90px 30px;
     background-color: var(--bg-grey);
     text-align: center;
     overflow: hidden;
 
+    > img {
+        position: absolute;
+        z-index: -1;
+        opacity: .5;
+    }
+    
     /* [alt="pens"] {
-            position: absolute;
-        top: -14px;
-        left: 82px;
+        position: absolute;
+        top: 10px;
+        left: -10px;
     } */
 
     #pens {
-        position: absolute;
-        top: -14px;
-        left: 82px;
+        top: 10px;
+        left: -10px;
     }
-
+    
     #earphones {
-        position: absolute;
-        top: -9px;
-        right: 165px;
+        top: -10px;
+        right: 20px;
     }
-
+    
     #coffee {
-        position: absolute;
-        top: 716px;
-        right: 50px;
+        bottom: -25px;
+        right: 80px;
     }
 
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 45px;
 
-    .features-item {
-        margin-top: 45px;
-        display: inline-block;
-        width: 342px;
-        text-align: center;
+        .features-item {
+            width: 342px;
+            text-align: center;
+        }
+    
+    .item-title {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
     }
 
-    .item-margin {
-        margin-left: 45px;
-        margin-right: 45px;
-    }
-
-    h4 {
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
 }
 
 .laptop {
     background: no-repeat left -900px top -100px url(../img/red-geometry.png);
     box-sizing: border-box;
-    padding-bottom: 90px;
-    padding-top: 90px;
+    padding: 90px 30px;
     text-align: center;
 
     img {
         vertical-align: middle;
+        width: 45%;
     }
 
-    .text-wrapper {
+    .wrapper {
         display: inline-block;
-        width: 492px;
+        /* width: 492px; */
+        width: max(380px, 45%);
         margin-left: 50px;
         vertical-align: middle;
         text-align: left;
@@ -223,16 +225,16 @@ h4 {
 }
 
 .clients {
-    padding-top: 106px;
+    padding: 90px 30px;
     box-sizing: border-box;
     background-image: url(/1/img/bg_clients.png);
     background-size: cover;
-    height: 658px;
 
     .wrapper {
         display: flex;
         justify-content: center;
-        gap: 65px;
+        flex-wrap: wrap;
+        gap: 45px;
 
         .item {
             justify-items: center;
@@ -241,7 +243,7 @@ h4 {
 
         .photo {
             width: 80px;
-            padding-top: 80px;
+            height: 80px;
             background: rgb(78, 78, 94);
         }
 
@@ -260,8 +262,8 @@ h4 {
         }
 
         .comment {
-            margin-top: 37px;
-            width: 324px;
+            margin-top: 24px;
+            width: 342px;
             font-style: italic;
             font-size: 1rem;
             color: white;
@@ -273,28 +275,33 @@ h4 {
     }
 
     .logos {
+        width: 1200px;
+        max-width: 95%;
+        margin-top: 64px;
+        margin-inline: auto;
         display: flex;
-        width: 960px;
         justify-content: space-between;
         align-items: center;
-        margin-top: 69px;
-        margin-inline: auto;
     }
 }
 
 .browser {
-    padding-top: 108px;
+    padding-top: 90px;
     justify-items: center;
     background: var(--bg-grey);
 
     .text {
-        width: 647px;
-        margin-bottom: 93px;
+        width: min(80%, 680px);
+        margin-bottom: 64px;
         text-align: center;
     }
 
     .wrapper {
         position: relative;
+
+        img {
+            width: 100%;
+        }
 
         &::after {
             content: "";
@@ -305,8 +312,7 @@ h4 {
             padding-top: 53px;
             padding-inline: 26px;
             width: 100%;
-            padding-top: 90px;
-            padding-bottom: 90px;
+            height: 100%;
             position: absolute;
             top: 0;
         }
@@ -315,26 +321,26 @@ h4 {
 
 .try-now {
     box-sizing: border-box;
-    padding-top: 100px;
-    padding-bottom: 90px;
+    padding: 90px 0px;
     background-color: rgb(50, 57, 105);
     text-align: center;
 
     h2 {
-        margin-bottom: 37px;
+        margin-bottom: 36px;
         color: white;
     }
 
     form {
+        max-width: 95%;
+        width: 1200px;
         display: inline-flex;
-        gap: 27px;
+        justify-content: space-between;
+        gap: 10px;
         align-items: flex-end;
 
         input {
-            width: 265px;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 30px;
+            width: max(25%, 160px);
+            padding: 16px;
             box-sizing: border-box;
             background-color: #464c77;
             border: 1px solid rgba(255, 255, 255, .5);
@@ -355,14 +361,14 @@ h4 {
             text-align: left;
 
             &::before {
-                margin-right: 15px;
+                margin-right: 8px;
                 content: url(../img/strelka.png);
                 vertical-align: top;
             }
         }
 
         .btn {
-            width: 265px;
+            width: 220px;
         }
     }
 
@@ -382,16 +388,18 @@ h4 {
 
 .footer {
     background: no-repeat left 900px top -1150px url(../img/red-geometry.png);
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding: 90px 0px;
 
     .wrapper {
+        width: 1200px;
+        max-width: 95vw;
+        margin-inline: auto;
         display: flex;
-        justify-content: center;
-        gap: 80px;
+        gap: 9%;
 
         h4 {
-            line-height: 46px;
+            line-height: 2;
+            text-wrap-mode: nowrap;
         }
 
         a {
@@ -426,10 +434,8 @@ h4 {
             display: flex;
 
             input {
-                width: 265px;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                padding-left: 30px;
+                width: calc(100% - 55px);
+                padding: 16px;
                 box-sizing: border-box;
                 background-color: var(--bg-grey);
                 border: none;
@@ -450,14 +456,8 @@ h4 {
 
             .btn {
                 width: 55px;
-                font-size: 20px;
+                font-size: 1.2rem;
             }
-        }
-
-        .data-entry {
-            position:relative;
-            font-family: 'Alegreya Sans SC', sans-serif;
-          }
         }
 
         .social {
